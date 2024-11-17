@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "test-data-builder-exercise"
+version = "0.1.0"
+description = ""
+package-mode = false
+
+[tool.poetry.dependencies]
+python = "^3.11"
+fastapi = { extras = ["standard"], version = "^0.112.0" }
+databases = { extras = ["aiosqlite"], version = "^0.9.0" }
+sqlmodel = "^0.0.22"
+
+[tool.poetry.group.test.dependencies]
+pytest = "^8.3.2"
+asgi-lifespan = "^2.1.0"
+httpx = "^0.27.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+
+[tool.pyright]
+typeCheckingMode = "standard"
