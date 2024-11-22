@@ -2,7 +2,9 @@ from bank_account import BankAccount
 
 
 class SavingsAccount(BankAccount):
-    def __init__(self, owner: str, balance: float = 0.0, interest_rate: float = 0.01) -> None:
+    def __init__(
+        self, owner: str, balance: float = 0.0, interest_rate: float = 0.01
+    ) -> None:
         super().__init__(owner, balance)
         self.interest_rate: float = interest_rate
 

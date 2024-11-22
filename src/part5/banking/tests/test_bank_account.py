@@ -22,7 +22,9 @@ def test_withdraw_decreases_balance(bank_account: BankAccount):
     assert bank_account.get_balance() == 300
 
 
-def test_withdraw_raises_error_for_insufficient_funds(bank_account: BankAccount):
+def test_withdraw_raises_error_for_insufficient_funds(
+    bank_account: BankAccount,
+):
     with pytest.raises(InsufficientFundsError):
         bank_account.withdraw(600)
 
